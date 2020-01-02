@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Målbilde on Informasjonsforvaltning dokumentasjon</title>
+    <link>/felles-datakatalog/overordnet-arkitektur/m%C3%A5lbilde/</link>
+    <description>Recent content in Målbilde on Informasjonsforvaltning dokumentasjon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb</language>
+    
+	<atom:link href="/felles-datakatalog/overordnet-arkitektur/m%C3%A5lbilde/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
