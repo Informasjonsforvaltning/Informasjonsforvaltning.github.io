@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>Hvordan publisere begreper i begrepskatalogen :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -356,7 +356,7 @@ Editer
 <p>Noen av kolonnene, for eksempel <em>bruksområde</em> har støtte for flere verdier. For å legge inn flere forekomster legger du til en ekstra kolonne med samme navn på første linje (overskrift) eller separerer forekomstene med |.</p>
 <p>Enkelte felter har også støtte for flere språk og målformer. Den nåværende importløsningen støtter norsk bokmål (nb), nynorsk (nn) og engelsk (en). Hvis språk og målform ikke er oppgitt vil denne automatisk bli satt til bokmål under importen.</p>
 <p>Legg til eller kopier inn termer og tilhørende informasjon ved å sette inn flere rader inntil listen du ønsker å importere til registreringsløsningen er komplett.</p>
-<h4 id=eksempel>Eksempel:</h4>
+<h4 id=eksempel>Eksempel</h4>
 <p>I tabellen nedenfor er kolonne a og b formattert for norsk bokmål, og kolonne c og d for engelsk.</p>
 <table>
 <thead>
@@ -419,7 +419,7 @@ Editer
 <tr>
 <td>kilde</td>
 <td>Formatteres med tekst beskrivelse og gyldig uri til kilde separert med tegnet |.</td>
-<td>«brønnøysund|https://www.brreg.no/»</td>
+<td>«brønnøysund|<a href=https://www.brreg.no/>https://www.brreg.no/</a>»</td>
 </tr>
 <tr>
 <td>merknad</td>
@@ -494,131 +494,131 @@ Editer
 <p>Du er nå klar for å importere CSV filen i registreringsløsningen.</p>
 <p>Logg deg inn på <a href=https://registrering.fellesdatakatalog.digdir.no>Registreringsløsningen</a> og velg Begrepskatalogen.</p>
 <p>Klikk på «Importer begreper» og velg den csv- eller json-filen du har opprettet.</p>
-<h4 id=eksempel-på-csv-fil>Eksempel på CSV-fil:</h4>
-<pre tabindex=0><code>anbefaltTerm:nb;tillattTerm:nb;anbefaltTerm:en;tillattTerm:en;frarådetTerm:nb;definisjon:nb
+<h4 id=eksempel-på-csv-fil>Eksempel på CSV-fil</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>anbefaltTerm:nb;tillattTerm:nb;anbefaltTerm:en;tillattTerm:en;frarådetTerm:nb;definisjon:nb
 test eksempel;eksempeltest;Test example;example test;illustrasjonstest;Dette er en definisjon på et eksempel
-</code></pre><h4 id=hvordan-importere-begreper-fra-json-format>Hvordan Importere begreper fra JSON format?</h4>
+</code></pre></div><h4 id=hvordan-importere-begreper-fra-json-format>Hvordan Importere begreper fra JSON format?</h4>
 <p>Opprett en JSON fil med 1 eller flere begreper på formatet under:</p>
-<pre tabindex=0><code>[
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JSON data-lang=JSON>[
   {
-    &quot;anbefaltTerm&quot;: {
-      &quot;navn&quot;: {
-        &quot;nb&quot;: &quot;1demoterm1811&quot;,
-	&quot;en&quot;:&quot;Test English term&quot;
+    <span style=color:#f92672>&#34;anbefaltTerm&#34;</span>: {
+      <span style=color:#f92672>&#34;navn&#34;</span>: {
+        <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;1demoterm1811&#34;</span>,
+ <span style=color:#f92672>&#34;en&#34;</span>:<span style=color:#e6db74>&#34;Test English term&#34;</span>
       }
     },
-    &quot;tillattTerm&quot;: {
-      &quot;nb&quot;: [
-        &quot;Tillatt term&quot;
+    <span style=color:#f92672>&#34;tillattTerm&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: [
+        <span style=color:#e6db74>&#34;Tillatt term&#34;</span>
       ]
     },
-    &quot;frarådetTerm&quot;: {
-      &quot;nb&quot;: [
-        &quot;Frarådet term&quot;
+    <span style=color:#f92672>&#34;frarådetTerm&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: [
+        <span style=color:#e6db74>&#34;Frarådet term&#34;</span>
       ]
     },
-    &quot;definisjon&quot;: {
-      &quot;tekst&quot;: {
-        &quot;nb&quot;: &quot;definisjon&quot;
+    <span style=color:#f92672>&#34;definisjon&#34;</span>: {
+      <span style=color:#f92672>&#34;tekst&#34;</span>: {
+        <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;definisjon&#34;</span>
       }
     },
-    &quot;kildebeskrivelse&quot;: {
-      &quot;forholdTilKilde&quot;: &quot;egendefinert&quot;,
-      &quot;kilde&quot;: []
+    <span style=color:#f92672>&#34;kildebeskrivelse&#34;</span>: {
+      <span style=color:#f92672>&#34;forholdTilKilde&#34;</span>: <span style=color:#e6db74>&#34;egendefinert&#34;</span>,
+      <span style=color:#f92672>&#34;kilde&#34;</span>: []
     },
-    &quot;merknad&quot;: {
-      &quot;nb&quot;: &quot;merknad&quot;
+    <span style=color:#f92672>&#34;merknad&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;merknad&#34;</span>
     },
-    &quot;eksempel&quot;: {
-      &quot;nb&quot;: &quot;bruk av begrepet: Eksempel&quot;
+    <span style=color:#f92672>&#34;eksempel&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;bruk av begrepet: Eksempel&#34;</span>
     },
-    &quot;fagområde&quot;: {
-      &quot;nb&quot;: &quot;bruk av begrepet: Fagområde&quot;
+    <span style=color:#f92672>&#34;fagområde&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;bruk av begrepet: Fagområde&#34;</span>
     },
-    &quot;bruksområde&quot;: {
-      &quot;nb&quot;: [
-        &quot;bruk av begrepet: bruksområde(r)&quot;
+    <span style=color:#f92672>&#34;bruksområde&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: [
+        <span style=color:#e6db74>&#34;bruk av begrepet: bruksområde(r)&#34;</span>
       ]
     },
-    &quot;omfang&quot;: {
-      &quot;uri&quot;: &quot;lenketilomfangno&quot;,
-      &quot;tekst&quot;: &quot;bruk av begrepet: Omfang: Tittel på omfang&quot;
+    <span style=color:#f92672>&#34;omfang&#34;</span>: {
+      <span style=color:#f92672>&#34;uri&#34;</span>: <span style=color:#e6db74>&#34;lenketilomfangno&#34;</span>,
+      <span style=color:#f92672>&#34;tekst&#34;</span>: <span style=color:#e6db74>&#34;bruk av begrepet: Omfang: Tittel på omfang&#34;</span>
     },
-    &quot;kontaktpunkt&quot;: {
-      &quot;harEpost&quot;: &quot;e-post@epost.no&quot;,
-      &quot;harTelefon&quot;: &quot;47474747&quot;
+    <span style=color:#f92672>&#34;kontaktpunkt&#34;</span>: {
+      <span style=color:#f92672>&#34;harEpost&#34;</span>: <span style=color:#e6db74>&#34;e-post@epost.no&#34;</span>,
+      <span style=color:#f92672>&#34;harTelefon&#34;</span>: <span style=color:#e6db74>&#34;47474747&#34;</span>
     },
-    &quot;gyldigFom&quot;: &quot;2019-12-31&quot;,
-    &quot;gyldigTom&quot;: &quot;2020-12-30&quot;,
-    &quot;endringslogelement&quot;: {
-      &quot;brukerId&quot;: &quot;03096000854&quot;,
-      &quot;endringstidspunkt&quot;: &quot;2020-10-14T12:54:52.264+02:00&quot;
+    <span style=color:#f92672>&#34;gyldigFom&#34;</span>: <span style=color:#e6db74>&#34;2019-12-31&#34;</span>,
+    <span style=color:#f92672>&#34;gyldigTom&#34;</span>: <span style=color:#e6db74>&#34;2020-12-30&#34;</span>,
+    <span style=color:#f92672>&#34;endringslogelement&#34;</span>: {
+      <span style=color:#f92672>&#34;brukerId&#34;</span>: <span style=color:#e6db74>&#34;03096000854&#34;</span>,
+      <span style=color:#f92672>&#34;endringstidspunkt&#34;</span>: <span style=color:#e6db74>&#34;2020-10-14T12:54:52.264+02:00&#34;</span>
     },
-    &quot;seOgså&quot;: [
-      &quot;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&quot;,
-      &quot;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&quot;
+    <span style=color:#f92672>&#34;seOgså&#34;</span>: [
+      <span style=color:#e6db74>&#34;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&#34;</span>,
+      <span style=color:#e6db74>&#34;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&#34;</span>
     ]
   },
   {
-    &quot;anbefaltTerm&quot;: {
-      &quot;navn&quot;: {
-        &quot;nb&quot;: &quot;2demoterm1811&quot;
+    <span style=color:#f92672>&#34;anbefaltTerm&#34;</span>: {
+      <span style=color:#f92672>&#34;navn&#34;</span>: {
+        <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;2demoterm1811&#34;</span>
       }
     },
-    &quot;tillattTerm&quot;: {
-      &quot;nb&quot;: [
-        &quot;Tillatt term&quot;
+    <span style=color:#f92672>&#34;tillattTerm&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: [
+        <span style=color:#e6db74>&#34;Tillatt term&#34;</span>
       ]
     },
-    &quot;frarådetTerm&quot;: {
-      &quot;nb&quot;: [
-        &quot;Frarådet term&quot;
+    <span style=color:#f92672>&#34;frarådetTerm&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: [
+        <span style=color:#e6db74>&#34;Frarådet term&#34;</span>
       ]
     },
-    &quot;definisjon&quot;: {
-      &quot;tekst&quot;: {
-        &quot;nb&quot;: &quot;definisjon&quot;
+    <span style=color:#f92672>&#34;definisjon&#34;</span>: {
+      <span style=color:#f92672>&#34;tekst&#34;</span>: {
+        <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;definisjon&#34;</span>
       }
     },
-    &quot;kildebeskrivelse&quot;: {
-      &quot;forholdTilKilde&quot;: &quot;egendefinert&quot;,
-      &quot;kilde&quot;: []
+    <span style=color:#f92672>&#34;kildebeskrivelse&#34;</span>: {
+      <span style=color:#f92672>&#34;forholdTilKilde&#34;</span>: <span style=color:#e6db74>&#34;egendefinert&#34;</span>,
+      <span style=color:#f92672>&#34;kilde&#34;</span>: []
     },
-    &quot;merknad&quot;: {
-      &quot;nb&quot;: &quot;merknad&quot;
+    <span style=color:#f92672>&#34;merknad&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;merknad&#34;</span>
     },
-    &quot;eksempel&quot;: {
-      &quot;nb&quot;: &quot;bruk av begrepet: Eksempel&quot;
+    <span style=color:#f92672>&#34;eksempel&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;bruk av begrepet: Eksempel&#34;</span>
     },
-    &quot;fagområde&quot;: {
-      &quot;nb&quot;: &quot;bruk av begrepet: Fagområde&quot;
+    <span style=color:#f92672>&#34;fagområde&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: <span style=color:#e6db74>&#34;bruk av begrepet: Fagområde&#34;</span>
     },
-    &quot;bruksområde&quot;: {
-      &quot;nb&quot;: [
-        &quot;bruk av begrepet: bruksområde(r)&quot;
+    <span style=color:#f92672>&#34;bruksområde&#34;</span>: {
+      <span style=color:#f92672>&#34;nb&#34;</span>: [
+        <span style=color:#e6db74>&#34;bruk av begrepet: bruksområde(r)&#34;</span>
       ]
     },
-    &quot;omfang&quot;: {
-      &quot;uri&quot;: &quot;http://lenketilomfang.no&quot;,
-      &quot;tekst&quot;: &quot;bruk av begrepet: Omfang: Tittel på omfang&quot;
+    <span style=color:#f92672>&#34;omfang&#34;</span>: {
+      <span style=color:#f92672>&#34;uri&#34;</span>: <span style=color:#e6db74>&#34;http://lenketilomfang.no&#34;</span>,
+      <span style=color:#f92672>&#34;tekst&#34;</span>: <span style=color:#e6db74>&#34;bruk av begrepet: Omfang: Tittel på omfang&#34;</span>
     },
-    &quot;kontaktpunkt&quot;: {
-      &quot;harEpost&quot;: &quot;e-post@epost.no&quot;,
-      &quot;harTelefon&quot;: &quot;47474747&quot;
+    <span style=color:#f92672>&#34;kontaktpunkt&#34;</span>: {
+      <span style=color:#f92672>&#34;harEpost&#34;</span>: <span style=color:#e6db74>&#34;e-post@epost.no&#34;</span>,
+      <span style=color:#f92672>&#34;harTelefon&#34;</span>: <span style=color:#e6db74>&#34;47474747&#34;</span>
     },
-    &quot;gyldigFom&quot;: &quot;2019-12-31&quot;,
-    &quot;gyldigTom&quot;: &quot;2020-12-30&quot;,
-    &quot;endringslogelement&quot;: {
-      &quot;brukerId&quot;: &quot;03096000854&quot;,
-      &quot;endringstidspunkt&quot;: &quot;2020-10-14T12:54:52.264+02:00&quot;
+    <span style=color:#f92672>&#34;gyldigFom&#34;</span>: <span style=color:#e6db74>&#34;2019-12-31&#34;</span>,
+    <span style=color:#f92672>&#34;gyldigTom&#34;</span>: <span style=color:#e6db74>&#34;2020-12-30&#34;</span>,
+    <span style=color:#f92672>&#34;endringslogelement&#34;</span>: {
+      <span style=color:#f92672>&#34;brukerId&#34;</span>: <span style=color:#e6db74>&#34;03096000854&#34;</span>,
+      <span style=color:#f92672>&#34;endringstidspunkt&#34;</span>: <span style=color:#e6db74>&#34;2020-10-14T12:54:52.264+02:00&#34;</span>
     },
-    &quot;seOgså&quot;: [
-      &quot;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&quot;,
-      &quot;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&quot;
+    <span style=color:#f92672>&#34;seOgså&#34;</span>: [
+      <span style=color:#e6db74>&#34;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&#34;</span>,
+      <span style=color:#e6db74>&#34;http://begrepskatalogen/begrep/98da4336-dff2-11e7-a0fd-005056821322&#34;</span>
     ]
   }
 ]
-</code></pre>
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>

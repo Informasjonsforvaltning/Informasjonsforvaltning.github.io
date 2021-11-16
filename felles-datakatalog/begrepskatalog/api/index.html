@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>API :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -353,24 +353,28 @@ Editer
 <thead>
 <tr>
 <th>Oppføring i API-katalogen</th>
-<th>Lenke direkte til spesifikasjon (openAPI v3)</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td>TBD</td>
+</tr>
+</tbody>
 </table>
 <h2 id=eksempel-på-spørringer>Eksempel på spørringer</h2>
 <p>Alle begrep:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/concepts&quot;
-</code></pre><p>Et spesifikt begrep basert på id:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/concepts/&lt;id&gt;&quot;
-</code></pre><p>Et enkelt søk etter begrep med ordet &ldquo;innsyn&rdquo;:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/concepts?q=innsyn&quot;
-</code></pre><p>En spørring som gir filter på organisasjonen (i eksempelet Brønnøysundregistrene) som har publisert begrepet:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/concepts?orgPath=/STAT/912660680/974760673&quot;
-</code></pre><p>Tilgang til registreringsløsningens samling av publiserte begreper som SKOS-AP-NO:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: text/turtle&quot; https://registrering-begrep-api.fellesdatakatalog.digdir.no/collections
-</code></pre><p>Som over, men for ein gitt organisasjon (publisher):</p>
-<pre tabindex=0><code>curl -H &quot;Accept: text/turtle&quot; &quot;https://registrering-begrep-api.fellesdatakatalog.digdir.no/collections?publisher=991825827&quot;
-</code></pre>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/concepts&#34;</span>
+</code></pre></div><p>Et spesifikt begrep basert på id:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/concepts/&lt;id&gt;&#34;</span>
+</code></pre></div><p>Et enkelt søk etter begrep med ordet &ldquo;innsyn&rdquo;:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/concepts?q=innsyn&#34;</span>
+</code></pre></div><p>En spørring som gir filter på organisasjonen (i eksempelet Brønnøysundregistrene) som har publisert begrepet:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/concepts?orgPath=/STAT/912660680/974760673&#34;</span>
+</code></pre></div><p>Tilgang til registreringsløsningens samling av publiserte begreper som SKOS-AP-NO:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: text/turtle&#34;</span> https://registrering-begrep-api.fellesdatakatalog.digdir.no/collections
+</code></pre></div><p>Som over, men for ein gitt organisasjon (publisher):</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: text/turtle&#34;</span> <span style=color:#e6db74>&#34;https://registrering-begrep-api.fellesdatakatalog.digdir.no/collections?publisher=991825827&#34;</span>
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>

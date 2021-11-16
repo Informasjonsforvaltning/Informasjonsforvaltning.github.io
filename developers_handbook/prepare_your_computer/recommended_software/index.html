@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>Recommended software :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -349,12 +349,12 @@ Editer
 <h3 id=the-following-is-a-list-of-useful-software-that-is-recommended>The following is a list of useful software that is recommended</h3>
 <h4 id=an-ide>An IDE</h4>
 <p>ATOM: <a href=https://snapcraft.io/atom>https://snapcraft.io/atom</a></p>
-<pre tabindex=0><code>% sudo snap install atom --classic
-</code></pre><p>or IntelliJ IDEA Community Edition: <a href=https://snapcraft.io/intellij-idea-community>https://snapcraft.io/intellij-idea-community</a></p>
-<pre tabindex=0><code>% sudo snap install intellij-idea-community --classic --edge
-</code></pre><p>For Python-hackers, it is highly recommended to install and use <a href=https://gist.github.com/frfahim/73c0fad6350332cef7a653bcd762f08d>virtual-env</a></p>
-<pre tabindex=0><code>sudo apt-get install python3-venv
-</code></pre><h4 id=pycharm>PyCharm</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% sudo snap install atom --classic
+</code></pre></div><p>or IntelliJ IDEA Community Edition: <a href=https://snapcraft.io/intellij-idea-community>https://snapcraft.io/intellij-idea-community</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% sudo snap install intellij-idea-community --classic --edge
+</code></pre></div><p>For Python-hackers, it is highly recommended to install and use <a href=https://gist.github.com/frfahim/73c0fad6350332cef7a653bcd762f08d>virtual-env</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>sudo apt-get install python3-venv
+</code></pre></div><h4 id=pycharm>PyCharm</h4>
 <p>For Python-hackers using <a href=https://www.jetbrains.com/pycharm/>PyCharm</a>:</p>
 <h5 id=plugin>plugin</h5>
 <p>Add the poetry plugin <a href=https://plugins.jetbrains.com/plugin/14307-poetry>https://plugins.jetbrains.com/plugin/14307-poetry</a></p>
@@ -366,17 +366,17 @@ Editer
 <h5 id=pytest>pytest</h5>
 <p>Ctrl+Alt+S -> Tools -> Python integrated tools -> Testing -> set &lsquo;pytest&rsquo; as Default test runner</p>
 <h4 id=google-cloud-sdk>Google Cloud SDK</h4>
-<pre tabindex=0><code>sudo snap install google-cloud-sdk --classic
-</code></pre><p>You then have to initialize the SDK. Follow instructions <a href=https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu>here</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>sudo snap install google-cloud-sdk --classic
+</code></pre></div><p>You then have to initialize the SDK. Follow instructions <a href=https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu>here</a></p>
 <h4 id=kubectl>kubectl</h4>
-<pre tabindex=0><code>sudo snap install kubectl --classic
-</code></pre><p>More [here](<a href=https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux>https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>sudo snap install kubectl --classic
+</code></pre></div><p>More [here](<a href=https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux>https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux</a></p>
 <p>You need to set a default cluster (e.g fdk-dev) for kubectl commands:</p>
-<pre tabindex=0><code>gcloud container clusters get-credentials fdk-dev
-</code></pre><h4 id=enable-shell-autocompletion-for-kubectl>Enable shell autocompletion for kubectl</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>gcloud container clusters get-credentials fdk-dev
+</code></pre></div><h4 id=enable-shell-autocompletion-for-kubectl>Enable shell autocompletion for kubectl</h4>
 <p>In short, if you use zsh add the follwing line to the end of your ~/.zshrc file:</p>
-<pre tabindex=0><code>source &lt;(kubectl completion zsh)
-</code></pre><p>Instructions <a href=https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux>here</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>source &lt;<span style=color:#f92672>(</span>kubectl completion zsh<span style=color:#f92672>)</span>
+</code></pre></div><p>Instructions <a href=https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux>here</a></p>
 <footer class=footline>
 </footer>
 </div>

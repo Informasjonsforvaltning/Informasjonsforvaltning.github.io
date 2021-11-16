@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>Required software :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -336,7 +336,14 @@ Editer
 <ul>
 <li><a href=#in-your-linux-machine-you-will-need-to-install-some-software>In your linux machine you will need to install some software</a>
 <ul>
-<li></li>
+<li><a href=#docker>Docker</a></li>
+<li><a href=#docker-compose>Docker compose</a></li>
+<li><a href=#maven>Maven</a></li>
+<li><a href=#openjdk>OpenJDK</a></li>
+<li><a href=#kotlin>Kotlin</a></li>
+<li><a href=#git>Git</a></li>
+<li><a href=#python>Python</a></li>
+<li><a href=#nodejs>NodeJS</a></li>
 </ul>
 </li>
 </ul>
@@ -347,31 +354,31 @@ Editer
 <div id=body-inner>
 <h1>Required software</h1>
 <h2 id=in-your-linux-machine-you-will-need-to-install-some-software>In your linux machine you will need to install some software</h2>
-<h4 id=docker>Docker</h4>
+<h3 id=docker>Docker</h3>
 <p>Instructions <a href=https://docs.docker.com/install/linux/docker-ce/ubuntu/>here</a></p>
-<h4 id=docker-compose>Docker compose</h4>
+<h3 id=docker-compose>Docker compose</h3>
 <p>Instructions <a href=https://docs.docker.com/compose/install/>here</a></p>
-<h4 id=maven>Maven</h4>
-<pre tabindex=0><code>% sudo apt-get install maven
-</code></pre><h4 id=openjdk>OpenJDK</h4>
-<pre tabindex=0><code>% sudo apt-get install default-jdk
-</code></pre><p>This is as of now openjdk-11. If you need java 8, do</p>
-<pre tabindex=0><code>% sudo apt-get install openjdk-8-jdk
-</code></pre><h4 id=kotlin>Kotlin</h4>
-<pre tabindex=0><code>% snap install kotlin
-</code></pre><h4 id=git>Git</h4>
-<pre tabindex=0><code>% sudo apt-get install git
-</code></pre><h4 id=python>Python</h4>
+<h3 id=maven>Maven</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% sudo apt-get install maven
+</code></pre></div><h3 id=openjdk>OpenJDK</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% sudo apt-get install default-jdk
+</code></pre></div><p>This is as of now openjdk-11. If you need java 8, do</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% sudo apt-get install openjdk-8-jdk
+</code></pre></div><h3 id=kotlin>Kotlin</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% snap install kotlin
+</code></pre></div><h3 id=git>Git</h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% sudo apt-get install git
+</code></pre></div><h3 id=python>Python</h3>
 <p>Python (both 2.7 and 3.) should be preinstalled.</p>
-<pre tabindex=0><code>% python --version
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% python --version
 Python 2.7.16+
 % python3 --version
 Python 3.7.4
-</code></pre><h4 id=nodejs>NodeJS</h4>
+</code></pre></div><h3 id=nodejs>NodeJS</h3>
 <p>It is highly recommended to use the <em>node version manager</em> (<code>nvm</code>). To install nvm, follow <a href=https://github.com/nvm-sh/nvm#installation-and-update>instructions</a>.</p>
 <p>Then, to download, compile, and install the latest release of node, do this:</p>
-<pre tabindex=0><code>% nvm install node # &quot;node&quot; is an alias for the latest version
-</code></pre>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% nvm install node <span style=color:#75715e># &#34;node&#34; is an alias for the latest version</span>
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>

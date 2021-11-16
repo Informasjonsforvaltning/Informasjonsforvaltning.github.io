@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>Probes :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -336,6 +336,7 @@ Editer
 <ul>
 <li><a href=#readiness>Readiness</a></li>
 <li><a href=#liveness>Liveness</a></li>
+<li><a href=#references>References</a></li>
 </ul>
 </nav>
 </div>
@@ -348,32 +349,32 @@ Editer
 <h2 id=readiness>Readiness</h2>
 <p>A readiness probe is used to check whether the service is ready to accept connections.</p>
 <p>In the deployment.yaml, you define the readiness probe. Example:</p>
-<pre tabindex=0><code>readinessProbe:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>readinessProbe:
    httpGet:
       path: /ready
-      port: 8080
-   initialDelaySeconds: 20
-   periodSeconds: 30
-   successThreshold: 1
-   failureThreshold: 5
-</code></pre><p>We should check if the runtime dependencies that the service absolutely need to function, is ready. If the service depends on a database, it should check if the database is ready.</p>
+      port: <span style=color:#ae81ff>8080</span>
+   initialDelaySeconds: <span style=color:#ae81ff>20</span>
+   periodSeconds: <span style=color:#ae81ff>30</span>
+   successThreshold: <span style=color:#ae81ff>1</span>
+   failureThreshold: <span style=color:#ae81ff>5</span>
+</code></pre></div><p>We should check if the runtime dependencies that the service absolutely need to function, is ready. If the service depends on a database, it should check if the database is ready.</p>
 <h2 id=liveness>Liveness</h2>
 <p>A liveness probe is used to check whether the service has gone into a broken state.</p>
 <p>In the deployment.yaml, you define the readiness probe. Example:</p>
-<pre tabindex=0><code>livenessProbe:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>livenessProbe:
    httpGet:
       path: /ping
-      port: 8080
-   initialDelaySeconds: 20
-   periodSeconds: 30
-   successThreshold: 1
-   failureThreshold: 5
-</code></pre><p>An implementation (in java/kotlin) would be simply</p>
-<pre tabindex=0><code>@RequestMapping(value = [&quot;/ping&quot;], method = [GET])
+      port: <span style=color:#ae81ff>8080</span>
+   initialDelaySeconds: <span style=color:#ae81ff>20</span>
+   periodSeconds: <span style=color:#ae81ff>30</span>
+   successThreshold: <span style=color:#ae81ff>1</span>
+   failureThreshold: <span style=color:#ae81ff>5</span>
+</code></pre></div><p>An implementation (in java/kotlin) would be simply</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#a6e22e>@RequestMapping</span><span style=color:#f92672>(</span>value <span style=color:#f92672>=</span> <span style=color:#f92672>[</span><span style=color:#e6db74>&#34;/ping&#34;</span><span style=color:#f92672>],</span> method <span style=color:#f92672>=</span> <span style=color:#f92672>[</span>GET<span style=color:#f92672>])</span>
 
-fun ping(): ResponseEntity&lt;Void&gt; =
-        ResponseEntity.ok().build()
-</code></pre><h1 id=references>References</h1>
+fun <span style=color:#a6e22e>ping</span><span style=color:#f92672>():</span> ResponseEntity<span style=color:#f92672>&lt;</span>Void<span style=color:#f92672>&gt;</span> <span style=color:#f92672>=</span>
+        ResponseEntity<span style=color:#f92672>.</span><span style=color:#a6e22e>ok</span><span style=color:#f92672>().</span><span style=color:#a6e22e>build</span><span style=color:#f92672>()</span>
+</code></pre></div><h2 id=references>References</h2>
 <p>The following is a nice intro for Spring Boot: <a href=https://www.baeldung.com/spring-boot-kubernetes-self-healing-apps>https://www.baeldung.com/spring-boot-kubernetes-self-healing-apps</a>
 Kubernetes configuration: <a href=https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/>https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/</a>
 Example with authorization: <a href=https://www.critiqus.com/post/kubernetes-health/>https://www.critiqus.com/post/kubernetes-health/</a></p>

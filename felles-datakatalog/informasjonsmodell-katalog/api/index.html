@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>API :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -353,18 +353,22 @@ Editer
 <thead>
 <tr>
 <th>Oppføring i API-katalogen</th>
-<th>Lenke direkte til spesifikasjon (openAPI v3)</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td><a href=https://data.norge.no/dataservices/6efe3d09-44d8-3f15-b812-efad16cb7132>https://data.norge.no/dataservices/6efe3d09-44d8-3f15-b812-efad16cb7132</a></td>
+</tr>
+</tbody>
 </table>
 <h2 id=eksempel-på-spørringer>Eksempel på spørringer</h2>
 <p>Alle informasjonsmodeller:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; https://fellesdatakatalog.digdir.no/api/informationmodels
-</code></pre><p>En spesifik informasjonsmodell basert på id:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; https://fellesdatakatalog.digdir.no/api/informationmodels/&lt;id&gt;
-</code></pre><p>En enkelt søk etter modeller med ordet &ldquo;summert&rdquo;:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; https://fellesdatakatalog.digdir.no/api/informationmodels?q=summert
-</code></pre>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> https://fellesdatakatalog.digdir.no/api/informationmodels
+</code></pre></div><p>En spesifik informasjonsmodell basert på id:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> https://fellesdatakatalog.digdir.no/api/informationmodels/&lt;id&gt;
+</code></pre></div><p>En enkelt søk etter modeller med ordet &ldquo;summert&rdquo;:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> https://fellesdatakatalog.digdir.no/api/informationmodels?q<span style=color:#f92672>=</span>summert
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>

@@ -3,7 +3,7 @@
 <title>Informasjonsforvaltning dokumentasjon</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name=revised content="2021-11-16T14:55:27 UTC">
+<meta name=revised content="2021-11-16T15:01:31 UTC">
 <title>API :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
@@ -332,14 +332,19 @@ Editer
 </div>
 <div class=progress>
 <div class=wrapper>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#detaljer>Detaljer</a></li>
+<li><a href=#eksempel-på-spørringer>Eksempel på spørringer</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
 <div id=body-inner>
 <h1>API</h1>
 <p>Her følger en kort beskrivelse API-katalogens API, samt eksempel på bruk med <a href=https://curl.haxx.se/>curl</a>.</p>
-<h1 id=detaljer>Detaljer</h1>
+<h2 id=detaljer>Detaljer</h2>
 <ul>
 <li>Server: <code>https://fellesdatakatalog.digdir.no</code></li>
 <li>Tilbyr: <code>application/json</code></li>
@@ -347,31 +352,29 @@ Editer
 <table>
 <thead>
 <tr>
-<th><a href=https://fellesdatakatalog.digdir.no/apis/77bb65c6-38f7-4eab-80c7-855d45aaa996>Oppføring i API-katalogen</a></th>
-<th><a href=https://raw.githubusercontent.com/brreg/openAPI/master/specs/api-cat.json>Lenke direkte til spesifikasjon (openAPI v3)</a></th>
+<th>Oppføring i API-katalogen</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><a href=https://data.norge.no/dataservices/b9cf5ca7-7acf-3fd9-b7ff-4167adb84a83>https://data.norge.no/dataservices/b9cf5ca7-7acf-3fd9-b7ff-4167adb84a83</a></td>
 </tr>
 </tbody>
 </table>
-<h1 id=eksempel-på-spørringer>Eksempel på spørringer</h1>
+<h2 id=eksempel-på-spørringer>Eksempel på spørringer</h2>
 <p>Alle API-er:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/apis&quot;
-</code></pre><p>Et spesifikt API basert på id:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/apis/&lt;id&gt;&quot;
-</code></pre><p>En enkelt søk etter API-er med ordet &ldquo;barnehage&rdquo;:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/apis?q=barnehage&quot;
-</code></pre><p>Liste alle API-er der utgiver er Registerenheten i Brønnøysund:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/apis?orgPath=/STAT/912660680/974760673&quot;
-</code></pre><p>Liste endepunkter til alle API-er som realiserer en gitt tjenestetype. Merk: &ldquo;environment&rdquo; er obligatorisk og må enten vere &ldquo;test&rdquo; eller &ldquo;production&rdquo;</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/apis/endpoints?serviceType=Kontoopplysninger&amp;environment=production&quot;
-</code></pre><p>Liste endepunkter til alle API-er som realiserer en gitt tjenestetype for gitte organisasjonsnummer:</p>
-<pre tabindex=0><code>curl -H &quot;Accept: application/json&quot; &quot;https://fellesdatakatalog.digdir.no/api/apis/endpoints?serviceType=Kontoopplysninger&amp;orgNos=984851006,837884942&amp;environment=production&quot;
-</code></pre>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/apis&#34;</span>
+</code></pre></div><p>Et spesifikt API basert på id:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/apis/&lt;id&gt;&#34;</span>
+</code></pre></div><p>En enkelt søk etter API-er med ordet &ldquo;barnehage&rdquo;:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/apis?q=barnehage&#34;</span>
+</code></pre></div><p>Liste alle API-er der utgiver er Registerenheten i Brønnøysund:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/apis?orgPath=/STAT/912660680/974760673&#34;</span>
+</code></pre></div><p>Liste endepunkter til alle API-er som realiserer en gitt tjenestetype. Merk: &ldquo;environment&rdquo; er obligatorisk og må enten vere &ldquo;test&rdquo; eller &ldquo;production&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/apis/endpoints?serviceType=Kontoopplysninger&amp;environment=production&#34;</span>
+</code></pre></div><p>Liste endepunkter til alle API-er som realiserer en gitt tjenestetype for gitte organisasjonsnummer:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>curl -H <span style=color:#e6db74>&#34;Accept: application/json&#34;</span> <span style=color:#e6db74>&#34;https://fellesdatakatalog.digdir.no/api/apis/endpoints?serviceType=Kontoopplysninger&amp;orgNos=984851006,837884942&amp;environment=production&#34;</span>
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>
