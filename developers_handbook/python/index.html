@@ -4,7 +4,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name=revised content="2021-11-26T12:47:31 UTC">
-<title>Categories :: Informasjonsforvaltning dokumentasjon</title>
+<title>Python :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
 <link href=/css/font-awesome.min.css rel=stylesheet>
@@ -17,7 +17,7 @@
 <link href=/css/beta_ribbon.css rel=stylesheet>
 <link href=/css/informasjonsforvaltning.css rel=stylesheet>
 </head>
-<body data-url=/categories/>
+<body data-url=/developers_handbook/python/>
 <div id=headermain></div>
 <nav id=sidebar>
 <div class=highlightable>
@@ -319,7 +319,12 @@ Recommended software
 <div id=overlay></div>
 <div class="padding highlightable">
 <div id=top-bar>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
+<div id=top-github-link>
+<a class=github-link href=https://github.com/Informasjonsforvaltning/docs/edit/master/content/Developers_Handbook/Python/_index.md target=blank>
+<i class="fa fa-code-fork"></i>
+Editer
+</a>
+</div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle>
 <i class="fa fa-bars"></i>
@@ -327,31 +332,45 @@ Recommended software
 </span>
 <span id=toc-menu><i class="fa fa-list-alt"></i></span>
 <span class=links>
-<a href=/>Felles datakatalog dokumentasjon</a> > Categories
+<a href=/>Felles datakatalog dokumentasjon</a> > <a href=/developers_handbook/>Developer's handbook</a> > Python
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#references>References</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
 <div id=body-inner>
-<h1>Categories</h1>
-<div class="extra-pagination inner">
-<nav class=pagination role=navigation>
-<span class=page-number>Side 1 av 0</span>
-</nav>
-</div>
-<div style=margin-bottom:2rem></div>
-<nav class=pagination role=navigation>
-<span class=page-number>Side 1 av 0</span>
-</nav>
+<h1>Python</h1>
+<ul>
+<li>We use <a href=https://github.com/pyenv/pyenv>pyenv</a> to manage python versions on our systems.</li>
+<li>We use <a href=https://github.com/pypa/pipx>pipx</a> for installing cli apps.</li>
+<li>We use <a href=https://python-poetry.org/>poetry</a>, <a href=https://nox.thea.codes/en/stable/>nox</a> and <a href=https://github.com/cjolowicz/nox-poetry>nox-poetry</a> to manage dependencies and automate our testing. This stack is also used in our CI workflows.</li>
+</ul>
+<p>Even though all of the tools are very well documented, there are things that you need to do once in a while that can be hard to remember.</p>
+<p>The following is therefore a list of usefull things to know which is not easily found in the documentation.</p>
+<p><strong>Update pyenv in order to install newer python</strong>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% pyenv update
+</code></pre></div><p><strong>List all packages and version-information</strong>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% pipx runpip nox list
+</code></pre></div><p><strong>Uninstall a package previously injected</strong>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Shell data-lang=Shell>% pipx runpip nox uninstall nox-poetry
+</code></pre></div><h2 id=references>References</h2>
+<p><a href=https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html>Method definitions</a>
+<a href=https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html>Status Code Definitions</a><br>
+<a href=https://tools.ietf.org/html/rfc6902>JSON Patch</a></p>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-next" href=/felles-datakatalog/ title="Felles datakatalog" style=margin-right:0><label>Felles datakatalog</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href=/developers_handbook/prepare_your_computer/recommended_software/ title="Recommended software"> <i class="fa fa-chevron-left"></i><label>Recommended software</label></a>
+<a class="nav nav-next" href=/developers_handbook/microservices/ title=Microservices style=margin-right:0><label>Microservices</label><i class="fa fa-chevron-right"></i></a></div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
