@@ -4,7 +4,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name=revised content="2022-06-07T11:04:12 UTC">
-<title>Søk og filter :: Informasjonsforvaltning dokumentasjon</title>
+<title>SPARQL :: Informasjonsforvaltning dokumentasjon</title>
 <link rel="shortcut icon" href=/images/favicon.png type=image/x-icon>
 <link href=/css/nucleus.css rel=stylesheet>
 <link href=/css/font-awesome.min.css rel=stylesheet>
@@ -17,7 +17,7 @@
 <link href=/css/beta_ribbon.css rel=stylesheet>
 <link href=/css/informasjonsforvaltning.css rel=stylesheet>
 </head>
-<body data-url=/felles-datakatalog/s%C3%B8k_og_filter/>
+<body data-url=/felles-datakatalog/s%C3%B8k_og_filter/sparql/>
 <div id=headermain></div>
 <nav id=sidebar>
 <div class=highlightable>
@@ -325,7 +325,7 @@ Recommended software
 <div class="padding highlightable">
 <div id=top-bar>
 <div id=top-github-link>
-<a class=github-link href=https://github.com/Informasjonsforvaltning/docs/edit/master/content/Felles%20datakatalog/S%c3%b8k_og_filter/_index.md target=blank>
+<a class=github-link href=https://github.com/Informasjonsforvaltning/docs/edit/master/content/Felles%20datakatalog/S%c3%b8k_og_filter/Sparql/_index.md target=blank>
 <i class="fa fa-code-fork"></i>
 Editer
 </a>
@@ -337,7 +337,7 @@ Editer
 </span>
 <span id=toc-menu><i class="fa fa-list-alt"></i></span>
 <span class=links>
-<a href=/>Felles datakatalog dokumentasjon</a> > <a href=/felles-datakatalog/>Felles datakatalog</a> > Søk og filter
+<a href=/>Felles datakatalog dokumentasjon</a> > <a href=/felles-datakatalog/>Felles datakatalog</a> > <a href=/felles-datakatalog/s%C3%B8k_og_filter/>Søk og filter</a> > SPARQL
 </span>
 </div>
 <div class=progress>
@@ -346,8 +346,7 @@ Editer
 <ul>
 <li>
 <ul>
-<li><a href=#søk>Søk</a></li>
-<li><a href=#filter>Filter</a></li>
+<li><a href=#eksempler-på-queries>Eksempler på queries</a></li>
 </ul>
 </li>
 </ul>
@@ -356,19 +355,37 @@ Editer
 </div>
 </div>
 <div id=body-inner>
-<h1>Søk og filter</h1>
-<p>Det følgende er både en forklaring og en spesifikasjon på hvordan søke- og filtreringsfunksjonaliteten fungerer i datakatalogen.</p>
-<h3 id=søk>Søk</h3>
-<p>TBD: Kort beskrivelse av søket</p>
-<h3 id=filter>Filter</h3>
-<p>TBD: Kort beskrivelse av filter</p>
+<h1>SPARQL</h1>
+<p>data.norge.no har en <a href=https://www.w3.org/TR/sparql11-overview/>SPARQL</a>-tjeneste som kan brukes for å søke i datakatalogen.</p>
+<p>Endepunktet har følgende adresse: <a href=https://sparql.fellesdatakatalog.digdir.no/>https://sparql.fellesdatakatalog.digdir.no/</a></p>
+<p>Et enkelt web-grensesnitt for å sende spørringer til endepunktet finner du her: <a href=https://data.norge.no/sparql>https://data.norge.no/sparql</a></p>
+<h3 id=eksempler-på-queries>Eksempler på queries</h3>
+<p>For å få oversikt over hvilke egenskaper som finnes:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>PREFIX dcat: &lt;http://www.w3.org/ns/dcat#&gt;
+SELECT *
+WHERE <span style=color:#f92672>{</span>​​​​​​
+ ?dataset a dcat:Dataset .
+  ?dataset ?prop ?value.
+<span style=color:#f92672>}</span>​​​​​​
+</code></pre></div><p>Deretter plukke og velge egenskaper:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>PREFIX dcat: &lt;http://www.w3.org/ns/dcat#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX purl: &lt;http://purl.org/dc/terms/&gt;
+SELECT *
+WHERE <span style=color:#f92672>{</span>​​​​​​​​​​​​​​
+ ?dataset a dcat:Dataset .
+ ?dataset purl:title ?title.
+ ?dataset rdf:type ?type.
+<span style=color:#75715e># Velg nye egenskaper ved: ?dataset &lt;ønsket egenskap&gt; ?egenskapsverdi</span>
+<span style=color:#f92672>}</span>​​​​​​​​​​​​​​​​​​​​​
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/felles-datakatalog/informasjonsmodell-katalog/api/ title=API> <i class="fa fa-chevron-left"></i><label>API</label></a>
-<a class="nav nav-next" href=/felles-datakatalog/s%C3%B8k_og_filter/s%C3%B8k/ title=Søk style=margin-right:0><label>Søk</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href=/felles-datakatalog/s%C3%B8k_og_filter/filter/ title=Filter> <i class="fa fa-chevron-left"></i><label>Filter</label></a>
+<a class="nav nav-next" href=/felles-datakatalog/statistikk/ title=Statistikk style=margin-right:0><label>Statistikk</label><i class="fa fa-chevron-right"></i></a></div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
